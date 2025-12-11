@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshan Dudhat | Flutter Developer Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config for Tailwind Colors if needed -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4; 
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-cyan-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+                        RD.
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#projects" class="hover:text-cyan-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="mailto:roshandudhat10@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-200 hover:text-white p-2">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400 mobile-link">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400 mobile-link">Skills</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400 mobile-link">Experience</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-cyan-400 mobile-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-medium">
+                    <i data-lucide="smartphone" class="mr-2 w-4 h-4"></i>
+                    Mobile Application Developer
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white">
+                    Hello, I'm <br />
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text">
+                        Roshan Dudhat
+                    </span>
+                </h1>
+                <p class="text-lg text-slate-400 leading-relaxed max-w-2xl">
+                    2+ years Flutter developer building cross-platform apps for Android, iOS, and web using Dart and clean architecture. Skilled in scalable UI, REST/Dio APIs, Firebase, Google Maps, payments, WebRTC, and offline storage (Hive/SQLite), delivering responsive, secure, and multilingual experiences.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:roshandudhat10@gmail.com" class="flex items-center px-6 py-3 border border-slate-700 hover:border-cyan-500 rounded-lg bg-slate-900 hover:bg-slate-800 transition-all group">
+                        <i data-lucide="mail" class="mr-2 w-5 h-5 text-cyan-500 group-hover:text-cyan-400"></i>
+                        Email Me
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ab5npnum_WnsLfh8jj_WhFrIQK6srZPV/view?usp=drive_link" class="flex items-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-all shadow-lg shadow-cyan-500/20">
+                        <i data-lucide="download" class="mr-2 w-5 h-5"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-6 text-slate-400 pt-4">
+                    <a href="https://github.com/Roshandudhat" target="_blank" class="hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                    <a href="https://linkedin.com/in/roshan-dudhat-2a5938257" target="_blank" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    <div class="flex items-center"><i data-lucide="map-pin" class="mr-2 w-5 h-5 text-cyan-500"></i> Surat, Gujarat</div>
+                </div>
+            </div>
+
+            <!-- Abstract Visual / Code Block -->
+            <div class="hidden lg:block relative mt-12 lg:mt-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                <div class="relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 shadow-2xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="text-xs text-slate-500">main.dart</div>
+                    </div>
+                    <div class="space-y-4 font-mono text-sm">
+                        <div class="text-blue-400">class <span class="text-yellow-400">RoshanDudhat</span> extends <span class="text-green-400">Developer</span> {</div>
+                        <div class="pl-4 text-purple-400">String currentRole = <span class="text-orange-400">"Flutter Specialist"</span>;</div>
+                        <div class="pl-4 text-purple-400">List&lt;String&gt; skills = [</div>
+                        <div class="pl-8 text-orange-400">"Clean Architecture",</div>
+                        <div class="pl-8 text-orange-400">"State Management",</div>
+                        <div class="pl-8 text-orange-400">"Native Integration"</div>
+                        <div class="pl-4 text-purple-400">];</div>
+                        <div class="pl-4 text-blue-400">void buildAwesomeApps() {</div>
+                        <div class="pl-8 text-slate-400">// Transforming ideas into reality</div>
+                        <div class="pl-8 text-cyan-400">runApp(NextBigThing());</div>
+                        <div class="pl-4 text-blue-400">}</div>
+                        <div class="text-blue-400">}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Technical Arsenal</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Languages -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i data-lucide="code" class="mr-2 w-5 h-5"></i> Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Dart</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">C</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">C++</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Java</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Kotlin</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i data-lucide="layers" class="mr-2 w-5 h-5"></i> Frameworks
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Flutter</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Android Native</span>
+                    </div>
+                </div>
+
+                <!-- Backend/DB -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i data-lucide="database" class="mr-2 w-5 h-5"></i> Backend/DB
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Firebase</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Firestore</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">SQLite</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Hive</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Shared Preferences</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i data-lucide="terminal" class="mr-2 w-5 h-5"></i> Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Git</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">GitHub</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">GitLab</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Postman</span>
+                    </div>
+                </div>
+
+                <!-- Libraries & APIs -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i data-lucide="smartphone" class="mr-2 w-5 h-5"></i> Libraries & APIs
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Dio</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Google Maps</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Stripe</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Razorpay</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">PhonePe</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">WebRTC</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">Zoom SDK</span>
+                        <span class="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-md border border-slate-800">AdMob</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Professional Journey</h2>
+            <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="space-y-12">
+            
+            <!-- Job 1 -->
+            <div class="relative pl-8 md:pl-0">
+                <!-- Timeline Line (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 w-0.5 h-full bg-slate-800 -translate-x-1/2 top-0"></div>
+                
+                <div class="md:flex items-center justify-between flex-row-reverse">
+                    <div class="hidden md:block w-5/12"></div>
+                    
+                    <!-- Timeline Dot -->
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-950 -translate-x-[5px] md:-translate-x-1/2 mt-1.5 md:mt-0"></div>
+
+                    <div class="md:w-5/12 bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-all shadow-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Flutter Developer</h3>
+                            <span class="text-xs bg-cyan-900/30 text-cyan-400 px-2 py-1 rounded">Nov 2024 - Present</span>
+                        </div>
+                        <h4 class="text-lg text-slate-400 mb-4">Resolute Solutions | Surat</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Developed cross-platform mobile and web applications using clean architecture.
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Integrated WebSockets, Google Maps, and payment gateways (Stripe, Razorpay).
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Built offline-first features using Hive and SQLite.
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Optimized UI rendering performance through widget memoization.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="relative pl-8 md:pl-0">
+                <div class="hidden md:block absolute left-1/2 w-0.5 h-full bg-slate-800 -translate-x-1/2 top-0"></div>
+                
+                <div class="md:flex items-center justify-between">
+                    <div class="hidden md:block w-5/12"></div>
+                    
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-950 -translate-x-[5px] md:-translate-x-1/2 mt-1.5 md:mt-0"></div>
+
+                    <div class="md:w-5/12 bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-all shadow-lg">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Flutter Developer</h3>
+                            <span class="text-xs bg-cyan-900/30 text-cyan-400 px-2 py-1 rounded">Sep 2023 - Oct 2024</span>
+                        </div>
+                        <h4 class="text-lg text-slate-400 mb-4">Stendin | Surat</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Built modular architecture for scalable mobile apps.
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Implemented secure login, in-app purchases, and AdMob ads.
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Developed multilingual UIs and theme management systems.
+                            </li>
+                            <li class="flex items-start text-sm text-slate-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-cyan-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                Managed App Store and Play Store submissions.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">CeyOne</h3>
+                                <p class="text-xs text-slate-500">Resolute Solutions</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">EV Platform</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            EV battery swapping platform with customer station discovery and inventory controls.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Flutter</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Maps</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Auth</span>
+                        </div>
+                        <a href="#" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Ajay’s Customer Food</h3>
+                                <p class="text-xs text-slate-500">Resolute Solutions</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Food Delivery</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Food ordering app with outlet selection, order placement, and live tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Dio</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Maps</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Order Flow</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.ajays_foods" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">L-Drive</h3>
+                                <p class="text-xs text-slate-500">Resolute Solutions</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Ride Booking</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Ride-booking platform with tracking, wallet, PayZone payments, and multilingual support.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Google Maps</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">PayZone</span>
+                        </div>
+                        <a href="https://apps.apple.com/us/app/l-drive/id6739799171" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">BooBud</h3>
+                                <p class="text-xs text-slate-500">Resolute Solutions</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Social/Chat</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Cross-platform chat and video calling solution using WebRTC.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">WebRTC</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Socket</span>
+                        </div>
+                        <a href="https://app.boobud.com/" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">WallParedise</h3>
+                                <p class="text-xs text-slate-500">Stendin</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Utilities</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Wallpaper app with Firebase backend, IAP, and AdMob integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Firebase</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">AdMob</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.wallparedise.wallpaper" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Health Provider App</h3>
+                                <p class="text-xs text-slate-500">Stendin</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Health</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Health tracking solution syncing with Google Fit and Apple Health.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Health Kit</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Hive</span>
+                        </div>
+                        <a href="https://testphysicalactivity.com/patient.apk" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Anokhi Kahaniya -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Anokhi Kahaniya</h3>
+                                <p class="text-xs text-slate-500">Personal Project</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Entertainment</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Explore unique and engaging stories. A mobile application bringing fascinating tales right to your fingertips.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Flutter</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Firebase</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.wallpaper.wallparedise&pcampaignid=web_share" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8: Kids Learning Game -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Kids Learning Game</h3>
+                                <p class="text-xs text-slate-500">Personal Project</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Education</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Interactive educational app designed to help children learn basics through fun mini-games and colorful visuals.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Flutter</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Audio</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.paredise.kids.learning.games&pcampaignid=web_share" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9: Kids Preschool Learn Game -->
+                <div class="group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 transition-all hover:transform hover:-translate-y-1">
+                    <div class="h-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Kids Preschool Learn Game</h3>
+                                <p class="text-xs text-slate-500">Personal Project</p>
+                            </div>
+                            <span class="text-xs px-2 py-1 bg-slate-900 border border-slate-700 rounded text-slate-400">Education</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 h-12 overflow-hidden">
+                            Comprehensive early learning app for preschoolers featuring alphabet, numbers, colors, and shapes exercises.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Flutter</span>
+                            <span class="text-xs text-cyan-300 bg-cyan-900/20 px-2 py-1 rounded">Game Logic</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.paredise.kids.game.edu.learning&pcampaignid=web_share" target="_blank" class="flex items-center justify-center w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-sm text-white rounded-lg transition-all">
+                            View Project <i data-lucide="external-link" class="ml-2 w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Education</h3>
+                <div class="space-y-4">
+                    <div class="flex flex-col">
+                        <span class="text-white font-medium">Bachelor of Computer Applications</span>
+                        <span class="text-slate-400 text-sm">Veer Narmad South Gujarat University | 2025</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-medium">HSC</span>
+                        <span class="text-slate-400 text-sm">Gujarat Secondary Education Board | 2022</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-right">
+                <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                <p class="text-slate-400">roshandudhat10@gmail.com</p>
+                <p class="text-slate-400">+91 9106338679</p>
+                <div class="flex justify-end space-x-4 mt-4">
+                    <a href="https://github.com/Roshandudhat" target="_blank" class="text-slate-500 hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="https://linkedin.com/in/roshan-dudhat-2a5938257" target="_blank" class="text-slate-500 hover:text-white"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+                <p class="mt-8 text-sm text-slate-600">
+                    © 2025 Roshan Dudhat. Built with HTML & Tailwind.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            // Toggle Icon between Menu and X
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
